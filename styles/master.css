@@ -1,0 +1,846 @@
+/**
+ * Plugin Name: 	iJoomla Tabs
+ * Plugin URI:  	https://ijoomla.org/wordpress-plugins/introductions/ijoomla-tabs/
+ * Description: 	Responsive tabs widget for WordPress, created by iJoomla.org.
+ * Version:     	1.0
+ * Author			Amin Shahrokhi
+ * Author URL		https://ijoomla.org/
+ * Author Email		support@ijoomla.org
+ * Creation Date	January 9, 2016
+ * @copyright		Copyright (c) 2015 iJoomla.org. All rights reserved.
+ * @license			GNU General Public License version 3 or later; see LICENSE.txt
+**/
+
+/* General style for all tabs */
+.itab {
+	max-width: 98% !important;
+}
+.itab article {
+	clear: both !important;
+}
+.header-text {
+	margin-bottom: 15px;
+}
+.footer-text {
+	margin-top: 15px;
+}
+.itab section.tab-contents article.tab-content {
+	display: none;
+}
+
+/* Begin style 1 (Default) */
+.itab-style-1 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-1 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-1 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #e5e5e5;
+	border-bottom: none;
+	margin: 0;
+	padding: 8px 13px;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.itab-style-1 .itab ul.tab-buttons li.tab-button:hover {
+	border-color: #cccccc;
+}
+.itab-style-1 .itab ul.tab-buttons li.active-tab-button {
+	background: #f6f6f6;
+}
+.itab-style-1 .itab section.tab-contents {
+	margin: 0;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 0 4px 4px 4px;
+	-moz-border-radius: 0 4px 4px 4px;
+	border-radius: 0 4px 4px 4px;
+}
+.itab-style-1 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-1 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 2 (Rounded) */
+.itab-style-2 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-2 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-2 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #e5e5e5;
+	margin: 0;
+	padding: 8px 13px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.itab-style-2 .itab ul.tab-buttons li.tab-button:hover {
+	border-color: #cccccc;
+}
+.itab-style-2 .itab ul.tab-buttons li.active-tab-button {
+	background: #f6f6f6;
+}
+.itab-style-2 .itab section.tab-contents {
+	margin: 5px 0 0;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.itab-style-2 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-2 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 3 (Easy) */
+.itab-style-3 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-3 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-3 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #e5e5e5;
+	margin: 0;
+	padding: 8px 13px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.itab-style-3 .itab ul.tab-buttons li.tab-button:hover {
+	border-color: #cccccc;
+}
+.itab-style-3 .itab ul.tab-buttons li.active-tab-button {
+	background: #f6f6f6;
+}
+.itab-style-3 .itab section.tab-contents {
+	margin: 0;
+	padding: 15px 5px;
+}
+.itab-style-3 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-3 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 4 (Nude) */
+.itab-style-4 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-4 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-4 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border-bottom: 2px solid #aaaaaa;
+	margin: 0;
+	padding: 8px 13px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.itab-style-4 .itab ul.tab-buttons li.tab-button:hover,
+.itab-style-4 .itab ul.tab-buttons li.active-tab-button {
+	color: #ff5900;
+	border-bottom: 2px solid #ff5900;
+}
+.itab-style-4 .itab section.tab-contents {
+	margin: 0;
+	padding: 15px 5px;
+}
+.itab-style-4 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-4 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 5 (Colored) */
+.itab-style-5 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-5 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-5 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #e5e5e5;
+	border-bottom: none;
+	margin: 0;
+	padding: 8px 13px;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.itab-style-5 .itab ul.tab-buttons li.tab-button:hover {
+	color: #ff5900;
+}
+.itab-style-5 .itab ul.tab-buttons li.active-tab-button {
+	color: white;
+	background: #ff5900;
+	border-color: #ff5900;
+}
+.itab-style-5 .itab ul.tab-buttons li.active-tab-button:hover {
+	color: white;
+}
+.itab-style-5 .itab section.tab-contents {
+	margin: 0;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 0 4px 4px 4px;
+	-moz-border-radius: 0 4px 4px 4px;
+	border-radius: 0 4px 4px 4px;
+}
+.itab-style-5 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-5 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 6 (Dark Inverse) */
+.itab-style-6 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-6 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-6 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #e5e5e5;
+	border-bottom: none;
+	background: black;
+	color: white;
+	margin: 0;
+	padding: 8px 13px;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.itab-style-6 .itab ul.tab-buttons li.tab-button:hover {
+	color: #ff5900;
+}
+.itab-style-6 .itab ul.tab-buttons li.active-tab-button {
+	color: white;
+	background: #ff5900;
+	border-color: #ff5900;
+}
+.itab-style-6 .itab ul.tab-buttons li.active-tab-button:hover {
+	color: white;
+}
+.itab-style-6 .itab section.tab-contents {
+	margin: 0;
+	padding: 15px;
+	-webkit-border-radius: 0 4px 4px 4px;
+	-moz-border-radius: 0 4px 4px 4px;
+	border-radius: 0 4px 4px 4px;
+	background: black;
+	color: white;
+}
+.itab-style-6 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-6 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 7 (Dark) */
+.itab-style-7 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-7 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-7 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #ff5900;
+	border-bottom: none;
+	background: #ff5900;
+	color: white;
+	margin: 0;
+	padding: 8px 13px;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.itab-style-7 .itab ul.tab-buttons li.tab-button:hover {
+	color: black;
+}
+.itab-style-7 .itab ul.tab-buttons li.active-tab-button {
+	color: white;
+	background: black;
+	border-color: black;
+}
+.itab-style-7 .itab ul.tab-buttons li.active-tab-button:hover {
+	color: white;
+}
+.itab-style-7 .itab section.tab-contents {
+	margin: 0;
+	padding: 15px;
+	-webkit-border-radius: 0 4px 4px 4px;
+	-moz-border-radius: 0 4px 4px 4px;
+	border-radius: 0 4px 4px 4px;
+	background: black;
+	color: white;
+}
+.itab-style-7 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-7 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 8 (Dip) */
+.itab-style-8 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-8 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-8 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #e5e5e5;
+	margin: 0;
+	padding: 8px 13px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.itab-style-8 .itab ul.tab-buttons li.tab-button:hover {
+	color: #ff5900;
+}
+.itab-style-8 .itab ul.tab-buttons li.active-tab-button {
+	background: #f5f5f5;
+	border-color: white;
+	-webkit-box-shadow: inset 0 0 8px #bbbbbb;
+	-moz-box-shadow: inset 0 0 8px #bbbbbb;
+	box-shadow: inset 0 0 8px #bbbbbb;
+}
+.itab-style-8 .itab ul.tab-buttons li.active-tab-button:hover {
+
+}
+.itab-style-8 .itab section.tab-contents {
+	margin: 5px 0 0;
+	padding: 15px;
+	border: 1px solid white;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #f9f9f9;
+	-webkit-box-shadow: inset 0 0 8px #bbbbbb;
+	-moz-box-shadow: inset 0 0 8px #bbbbbb;
+	box-shadow: inset 0 0 8px #bbbbbb;
+}
+.itab-style-8 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-8 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 9 (BootStrap) */
+.itab-style-9 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-9 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-9 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #e0e0e0;
+	border-bottom: none;
+	margin: 0;
+	padding: 8px 13px;
+	color: #666666;
+	text-shadow: 1px 1px 1px white;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+	background-color: #f5f5f5;
+	background-image: -moz-linear-gradient(top,#fff,#e8e8e8);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e8e8e8));
+	background-image: -webkit-linear-gradient(top,#fff,#e8e8e8);
+	background-image: -o-linear-gradient(top,#fff,#e8e8e8);
+	background-image: linear-gradient(to bottom,#fff,#e8e8e8);
+	background-repeat: repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe5e5e5', GradientType=0);
+	*background-color: #e8e8e8;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.itab-style-9 .itab ul.tab-buttons li.tab-button:hover {
+	background-color: #f3f3f3;
+	background-image: -moz-linear-gradient(top,#fff,#cccccc);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#cccccc));
+	background-image: -webkit-linear-gradient(top,#fff,#cccccc);
+	background-image: -o-linear-gradient(top,#fff,#cccccc);
+	background-image: linear-gradient(to bottom,#fff,#cccccc);
+	background-repeat: repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#cccccc', GradientType=0);
+	*background-color: #cccccc;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	color: black;
+	text-shadow: 1px 1px 1px white;
+}
+.itab-style-9 .itab ul.tab-buttons li.active-tab-button {
+	background-color: #f3f3f3;
+	background-image: -moz-linear-gradient(top,#fff,#cccccc);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#cccccc));
+	background-image: -webkit-linear-gradient(top,#fff,#cccccc);
+	background-image: -o-linear-gradient(top,#fff,#cccccc);
+	background-image: linear-gradient(to bottom,#fff,#cccccc);
+	background-repeat: repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#cccccc', GradientType=0);
+	*background-color: #cccccc;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	color: black;
+	text-shadow: 1px 1px 1px white;
+}
+.itab-style-9 .itab ul.tab-buttons li.active-tab-button:hover {
+
+}
+.itab-style-9 .itab section.tab-contents {
+	margin: 0;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 0 4px 4px 4px;
+	-moz-border-radius: 0 4px 4px 4px;
+	border-radius: 0 4px 4px 4px;
+}
+.itab-style-9 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-9 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 10 (BootStrap Disjunct) */
+.itab-style-10 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-10 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-10 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #e0e0e0;
+	margin: 0;
+	padding: 8px 13px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.itab-style-10 .itab ul.tab-buttons li.tab-button:hover {
+	background-color: #f3f3f3;
+	background-image: -moz-linear-gradient(top,#fff,#cccccc);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#cccccc));
+	background-image: -webkit-linear-gradient(top,#fff,#cccccc);
+	background-image: -o-linear-gradient(top,#fff,#cccccc);
+	background-image: linear-gradient(to bottom,#fff,#cccccc);
+	background-repeat: repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#cccccc', GradientType=0);
+	*background-color: #cccccc;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	color: black;
+	text-shadow: 1px 1px 1px white;
+}
+.itab-style-10 .itab ul.tab-buttons li.active-tab-button {
+	background-color: #f3f3f3;
+	background-image: -moz-linear-gradient(top,#fff,#cccccc);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#cccccc));
+	background-image: -webkit-linear-gradient(top,#fff,#cccccc);
+	background-image: -o-linear-gradient(top,#fff,#cccccc);
+	background-image: linear-gradient(to bottom,#fff,#cccccc);
+	background-repeat: repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#cccccc', GradientType=0);
+	*background-color: #cccccc;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	color: black;
+	text-shadow: 1px 1px 1px white;
+}
+.itab-style-10 .itab ul.tab-buttons li.active-tab-button:hover {
+
+}
+.itab-style-10 .itab section.tab-contents {
+	margin: 5px 0 0;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.itab-style-10 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-10 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 11 (Square) */
+.itab-style-11 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-11 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-11 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #e5e5e5;
+	border-bottom: none;
+	margin: 0;
+	padding: 8px 13px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.itab-style-11 .itab ul.tab-buttons li.tab-button:hover {
+	border-color: #cccccc;
+}
+.itab-style-11 .itab ul.tab-buttons li.active-tab-button {
+	background: #f6f6f6;
+}
+.itab-style-11 .itab section.tab-contents {
+	margin: 0;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+}
+.itab-style-11 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-11 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 12 (Square Disjunct) */
+.itab-style-12 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-12 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-12 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #e5e5e5;
+	margin: 0;
+	padding: 8px 13px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.itab-style-12 .itab ul.tab-buttons li.tab-button:hover {
+	border-color: #cccccc;
+}
+.itab-style-12 .itab ul.tab-buttons li.active-tab-button {
+	background: #f6f6f6;
+}
+.itab-style-12 .itab section.tab-contents {
+	margin: 5px 0 0;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+}
+.itab-style-12 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-12 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 13 (Square BootStrap) */
+.itab-style-13 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-13 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-13 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #e0e0e0;
+	border-bottom: none;
+	margin: 0;
+	padding: 8px 13px;
+	color: #666666;
+	text-shadow: 1px 1px 1px white;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+	background-color: #f5f5f5;
+	background-image: -moz-linear-gradient(top,#fff,#e8e8e8);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e8e8e8));
+	background-image: -webkit-linear-gradient(top,#fff,#e8e8e8);
+	background-image: -o-linear-gradient(top,#fff,#e8e8e8);
+	background-image: linear-gradient(to bottom,#fff,#e8e8e8);
+	background-repeat: repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe5e5e5', GradientType=0);
+	*background-color: #e8e8e8;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.itab-style-13 .itab ul.tab-buttons li.tab-button:hover {
+	background-color: #f3f3f3;
+	background-image: -moz-linear-gradient(top,#fff,#cccccc);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#cccccc));
+	background-image: -webkit-linear-gradient(top,#fff,#cccccc);
+	background-image: -o-linear-gradient(top,#fff,#cccccc);
+	background-image: linear-gradient(to bottom,#fff,#cccccc);
+	background-repeat: repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#cccccc', GradientType=0);
+	*background-color: #cccccc;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	color: black;
+	text-shadow: 1px 1px 1px white;
+}
+.itab-style-13 .itab ul.tab-buttons li.active-tab-button {
+	background-color: #f3f3f3;
+	background-image: -moz-linear-gradient(top,#fff,#cccccc);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#cccccc));
+	background-image: -webkit-linear-gradient(top,#fff,#cccccc);
+	background-image: -o-linear-gradient(top,#fff,#cccccc);
+	background-image: linear-gradient(to bottom,#fff,#cccccc);
+	background-repeat: repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#cccccc', GradientType=0);
+	*background-color: #cccccc;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	color: black;
+	text-shadow: 1px 1px 1px white;
+}
+.itab-style-13 .itab ul.tab-buttons li.active-tab-button:hover {
+
+}
+.itab-style-13 .itab section.tab-contents {
+	margin: 0;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+}
+.itab-style-13 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-13 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin style 14 (Square BootStrap Disjunct) */
+.itab-style-14 .itab {
+	margin: 0;
+	padding: 0;
+}
+.itab-style-14 .itab ul.tab-buttons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.itab-style-14 .itab ul.tab-buttons li.tab-button {
+	display: inline-block;
+	border: 1px solid #e0e0e0;
+	margin: 0;
+	padding: 8px 13px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.itab-style-14 .itab ul.tab-buttons li.tab-button:hover {
+	background-color: #f3f3f3;
+	background-image: -moz-linear-gradient(top,#fff,#cccccc);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#cccccc));
+	background-image: -webkit-linear-gradient(top,#fff,#cccccc);
+	background-image: -o-linear-gradient(top,#fff,#cccccc);
+	background-image: linear-gradient(to bottom,#fff,#cccccc);
+	background-repeat: repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#cccccc', GradientType=0);
+	*background-color: #cccccc;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	color: black;
+	text-shadow: 1px 1px 1px white;
+}
+.itab-style-14 .itab ul.tab-buttons li.active-tab-button {
+	background-color: #f3f3f3;
+	background-image: -moz-linear-gradient(top,#fff,#cccccc);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#cccccc));
+	background-image: -webkit-linear-gradient(top,#fff,#cccccc);
+	background-image: -o-linear-gradient(top,#fff,#cccccc);
+	background-image: linear-gradient(to bottom,#fff,#cccccc);
+	background-repeat: repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#cccccc', GradientType=0);
+	*background-color: #cccccc;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	color: black;
+	text-shadow: 1px 1px 1px white;
+}
+.itab-style-14 .itab ul.tab-buttons li.active-tab-button:hover {
+
+}
+.itab-style-14 .itab section.tab-contents {
+	margin: 5px 0 0;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+}
+.itab-style-14 .itab section.tab-contents article.tab-content {
+	/* display: none; */
+}
+.itab-style-14 .itab section.tab-contents article.active-tab-content {
+
+}
+
+/* Begin your custom style. If you've selected the style "Custom" for a widget, it'll read it's style values from this block: */
+.itab-style-15 .itab {
+
+}
+.itab-style-15 .itab ul.tab-buttons {
+
+}
+.itab-style-15 .itab ul.tab-buttons li.tab-button {
+
+}
+.itab-style-15 .itab ul.tab-buttons li.tab-button:hover {
+
+}
+.itab-style-15 .itab ul.tab-buttons li.active-tab-button {
+
+}
+.itab-style-15 .itab section.tab-contents {
+
+}
+.itab-style-15 .itab section.tab-contents article.tab-content {
+
+}
+.itab-style-15 .itab section.tab-contents article.active-tab-content {
+
+}
+/* End your custom style */
+
+/* Tab contents are responsive by de itself. Now, @media making tab buttons responsive */
+@media only screen and (max-width: 765px) {
+	.itab {
+		height: auto !important;
+	}
+	li.tab-button {
+		display: block !important;
+		width: 94% !important;
+		margin: 3px 0 !important;
+		padding: 3% !important;
+		text-align: center !important;
+	}
+}
+
+/* Assets */
+.clear {
+	clear: both;
+}
